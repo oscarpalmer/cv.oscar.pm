@@ -1,25 +1,7 @@
 sv:
   general:
     title: Allmän information
-    items:
-      -
-        title: Namn
-        value: Oscar Carl Anders Palmér
-      -
-        title: Födelsedatum
-        value: 2a Januari, 1992
-      -
-        title: Adress
-        value: Alskogsgatan 10, 52338, Ulricehamn
-      -
-        title: Telefonnummer
-        value: <a class="link" href="tel:+46705692546">+46705692546</a>
-      -
-        title: Email
-        value: <a class="link" href="mailto:opalmer@me.com">opalmer@me.com</a>
-      -
-        title: Webbsida
-        value: <a class="link" href="https://oscar.pm">oscar.pm</a>
+    birthday: 2a Januari, 1992
 
   work:
     title: Arbetslivserfarenhet
@@ -65,61 +47,49 @@ sv:
     title: Språkkunskaper
     items:
       -
-        name: Svenska
+        title: Svenska
         description: Flytande i både tal och skrift; modersmål
       -
-        name: Engelska
+        title: Engelska
         description: Flytande i både tal och skrift
       -
-        name: Tyska
+        title: Tyska
         description: Grundläggande kunskaper
       -
-        name: Spanska
+        title: Spanska
         description: Grundläggande kunskaper
 
   technology:
     title: Teknologiska kunskaper
     items:
       -
-        name: Adobe
+        title: Adobe
         example: InDesign, Photoshop, etc.
         description: Goda kunskaper
       -
-        name: Microsoft Office
+        title: Microsoft Office
         example: Excel, Word, etc.
         description: Goda kunskaper
       -
-        name: Operativsystem
+        title: Operativsystem
         example: Windows &amp; Unix
         description: Mycket goda kunskaper
     description:
       -
-        Jag har även stor erfarenhet inom utveckling i olika former, främst för webben, men även klassiska miljöer. Gällande webbutveckling är jag mycket van vid märkspråk, stilmallsspråk, och skriptspråk, samt olika bakgrundsspråk och miljöer
+        Jag har även stor erfarenhet av utveckling i olika former, främst för webben, men även klassiska miljöer. Gällande webbutveckling är jag mycket van vid märk, stilmall- och skriptspråk <i>(front-end)</i>, samt olika språk och miljöer för bakgrundsutveckling <i>(back-end)</i>.
       -
-        Servermiljöer jag vanligtvis använder mig av är Apache och JAMstack (Netlify, Zeit, etc.), men har även publicerat webbapplikationer ovanpå nginx, samt utvecklat andra sådana med hjälp av IIS.
+        Servermiljöer jag vanligtvis använder mig av är <a class="link" href="https://httpd.apache.org">Apache</a> och <a class="link" href="https://jamstack.org">JAMstack</a> <i>(<a class="link" href="https://www.netlify.com">Netlify</a>, <a class="link" href="https://zeit.co/now">Zeit</a>, etc.)</i>, men jag har även publicerat webbapplikationer ovanpå <a class="link" href="https://nginx.org/en/">nginx</a>, samt utvecklat andra sådana med hjälp av <a class="link" href="https://www.iis.net">IIS</a>.
       -
         Gällande utveckling för klassiska miljöer &ndash; ej webbaserat &ndash;  har jag utvecklat applikationer för både Windows och iOS.
-    languages:
+    development:
       title: Programmeringsspråk och miljöer
       items:
-        -
-          title: Märkspråk
-          items: ['HTML', 'Erubis', 'Haml', 'Handlebars']
-        -
-          title: Stilmallsspråk
-          items: ['CSS', 'Sass']
-        -
-          title: Skriptspråk
-          items: ['JavaScript', 'CoffeeScript', 'TypeScript']
-        -
-          title: Bakgrundsspråk
-          items: ['PHP', 'Python', 'Ruby']
-        -
-          title: Applikationsspråk
-          items: ['C#', 'Windows Forms', 'Windows Presentation Foundation', 'Objective-C', 'Swift']
-        -
-          title: Programmeringsmiljöer
-          items: ['Ember', 'Flask', 'Laravel', 'Middleman', 'Rails', 'Vue']
+        - Märkspråk
+        - Stilmallsspråk
+        - Skriptspråk
+        - Bakgrundsspråk
+        - Applikationsspråk
+        - Programmeringsmiljöer
 
   miscellaneous:
     title: Övrig information

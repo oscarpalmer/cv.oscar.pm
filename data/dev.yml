@@ -1,0 +1,76 @@
+items:
+  -
+    -
+      title: HTML
+      value: https://www.w3.org/html/
+    -
+      title: ERB
+      value: https://docs.ruby-lang.org/en/trunk/ERB.html
+    -
+      title: Haml
+      value: http://haml.info
+    -
+      title: Handlebars
+      value: https://handlebarsjs.com
+  -
+    -
+      title: CSS
+      value: https://www.w3.org/Style/CSS/Overview.en.html
+    -
+      title: Sass
+      value: https://sass-lang.com
+  -
+    -
+      title: JavaScript
+      value: https://developer.mozilla.org/en-US/docs/Web/javascript
+    -
+      title: CoffeeScript
+      value: https://coffeescript.org
+    -
+      title: TypeScript
+      value: https://www.typescriptlang.org
+  -
+    -
+      title: PHP
+      value: https://secure.php.net
+    -
+      title: Python
+      value: https://www.python.org
+    -
+      title: Ruby
+      value: https://www.ruby-lang.org/en/
+  -
+    -
+      title: C#
+      value: https://en.wikipedia.org/wiki/C_Sharp_%28programming_language%29
+    -
+      title: Windows Forms
+      value: https://en.wikipedia.org/wiki/Windows_Forms
+    -
+      title: Windows Presentation Foundation
+      value: https://en.wikipedia.org/wiki/Windows_Presentation_Foundation
+    -
+      title: Objective-C
+      value: https://en.wikipedia.org/wiki/Objective-C
+    -
+      title: Swift
+      value: https://developer.apple.com/swift/
+  -
+    -
+      title: Ember
+      value: https://www.emberjs.com
+    -
+      title: Flask
+      value: http://flask.pocoo.org
+    -
+      title: Laravel
+      value: https://laravel.com
+    -
+      title: Middleman
+      value: https://middlemanapp.com
+    -
+      title: Rails
+      value: https://rubyonrails.org
+    -
+      title: Vue
+      value: https://vuejs.org

@@ -8,10 +8,16 @@
 %section
   %h2= general[:title]
   %ul
-    - general[:items].each do |item|
-      %li
-        %b= item[:title]
-        =   item[:value]
+    %li= data.oscar[:name]
+    %li
+      %time{ datetime: '1992-01-02' }= general[:birthday]
+    %li= data.oscar[:address]
+    %li
+      %a{ class: 'link', href: data.oscar[:phone][:value] }= data.oscar[:phone][:title]
+    %li
+      %a{ class: 'link', href: data.oscar[:email][:value] }= data.oscar[:email][:title]
+    %li
+      %a{ class: 'link', href: data.oscar[:website][:value] }= data.oscar[:website][:title]
 
 %section
   %h2= work[:title]
@@ -36,7 +42,7 @@
   %ul
     - languages[:items].each do |item|
       %li
-        %b= item[:name]
+        %b= item[:title]
         =   item[:description]
 
 
@@ -45,19 +51,20 @@
   %ul
     - technology[:items].each do |item|
       %li
-        %b= item[:name]
+        %b= item[:title]
         %i= item[:example]
         =   item[:description]
   - technology[:description].each do |desc|
     %p= desc
-  %h3= technology[:languages][:title]
+  %h3= technology[:development][:title]
   %ul
-    - technology[:languages][:items].each do |tech|
+    - technology[:development][:items].each_with_index do |dev, index|
       %li
-        %h4= tech[:title]
+        %h4= dev
         %ul
-          - tech[:items].each do |item|
-            %li= item
+          - data.dev[:items][index].each do |item|
+            %li
+              %a{ class: 'link', href: item[:value] }= item[:title]
 
 %section
   %h2= miscellaneous[:title]
