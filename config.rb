@@ -15,6 +15,9 @@ activate :external_pipeline,
   source: '.tmp/gulp',
   latency: 1
 
+# Localisation
+activate :i18n, langs: [:sv], mount_at_root: :sv
+
 # Live reloading of assets (CSS, JS) during development
 activate :livereload
 

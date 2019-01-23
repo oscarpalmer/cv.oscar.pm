@@ -1,135 +1,66 @@
-%section
-  %h2 Allmän information
-  %ul
-    %li
-      %b Namn
-      Oscar Carl Anders Palmér
-    %li
-      %b Födelsedatum
-      %time{ datetime: '' } 2a Januari, 1992
-    %li
-      %b Adress
-      Alskogsgatan 10, 52338, Ulricehamn
-    %li
-      %b Telefonnummer
-      %a{ href: 'tel:+46705692546' } 0705692546
-    %li
-      %b Email
-      %a{ href: 'mailto:opalmer@me.com' } opalmer@me.com
-    %li
-      %b Webbplats
-      %a{ href: 'https://oscar.pm' } oscar.pm
+- general = I18n.t :general
+- work = I18n.t :work
+- education = I18n.t :education
+- languages = I18n.t :languages
+- technology = I18n.t :technology
+- miscellaneous = I18n.t :miscellaneous
 
 %section
-  %h2 Arbetslivserfarenhet
+  %h2= general[:title]
   %ul
-    %li
-      %b 2015
-      %i Lernia AB
-      Temporära konsultanställningar hos Autotube AB och Parker Hannifin
-    %li
-      %b 2014&ndash;2015
-      %i Seger Europe AB
-      Maskinoperatör; underhöll maskiner och tillverkade textilprodukter
-    %li
-      %b 2014
-      %i LK Pex AB
-      Producerade, packade, och kvalitetstestade plast- och gummirör
-    %li
-      %b 2011
-      %i Bogesunds Data & Elektronik AB
-      Praktik via gymnasieutbildning; reparerade och byggde datorer
-    %li
-      %b 2008
-      %i Hesters Äldreboende
-      Sommarjobb; diskade, städade, tvättade, och umgicks med de boende
+    - general[:items].each do |item|
+      %li
+        %b= item[:title]
+        =   item[:value]
 
 %section
-  %h2 Utbildning
+  %h2= work[:title]
   %ul
-    %li
-      %b 2016&ndash;2019
-      %i Systemvetenskap
-      Högskolan i Borås
-    %li
-      %b 2011&ndash;2012
-      %i Innovativ Programmering
-      Linköpings Universitet; ofullständig utbildning
-    %li
-      %b 2008&ndash;2011
-      %i Teknik, teoretisk inriktning
-      Tingsholmsgymnasiet
+    - work[:items].each do |item|
+      %li
+        %b= item[:date]
+        %i= item[:employer]
+        =   item[:description]
 
 %section
-  %h2 Språkkunskaper
+  %h2= education[:title]
   %ul
-    %li
-      %b Svenska
-      Flytande i både tal och skrift; modersmål
-    %li
-      %b Engelska
-      Flytande i både tal och skrift
-    %li
-      %b Tyska
-    %li
-      %b Spanska
+    - education[:items].each do |item|
+      %li
+        %b= item[:date]
+        %i= item[:school]
+        =   item[:description]
+
+%section
+  %h2= languages[:title]
+  %ul
+    - languages[:items].each do |item|
+      %li
+        %b= item[:name]
+        =   item[:description]
 
 
 %section
-  %h2 IT-kunskaper
+  %h2= technology[:title]
   %ul
-    %li
-      %b Adobe
-      %i InDesign, Photoshop, etc.
-      Goda kunskaper
-    %li
-      %b Microsoft Office
-      %i Excel, Word, etc.
-      Goda kunskaper
-    %li
-      %b Operativsystem
-      %i Windows &amp; Unix
-      Mycket goda kunskaper
-
-  %p Jag har även stor erfarenhet inom utveckling i olika former, främst för webben, men även klassiska miljöer. Gällande webbutveckling är jag mycket van vid märkspråk, stilmallsspråk, och skriptspråk, samt olika bakgrundsspråk och miljöer
-  %p Servermiljöer jag vanligtvis använder mig av är Apache och JAMstack (Netlify, Zeit, etc.), men har även publicerat webbapplikationer ovanpå nginx, samt utvecklat andra sådana med hjälp av IIS.
-  %p Gällande utveckling för klassiska miljöer &ndash; ej webbaserat &ndash;  har jag utvecklat applikationer för både Windows och iOS.
-
-  %h3 Programmeringsspråk och miljöer
+    - technology[:items].each do |item|
+      %li
+        %b= item[:name]
+        %i= item[:example]
+        =   item[:description]
+  - technology[:description].each do |desc|
+    %p= desc
+  %h3= technology[:languages][:title]
   %ul
-    %li
-      %h4 Märkspråk
-      %ul
-        - ['HTML', 'Erubis', 'Haml', 'Handlebars'].each do |lang|
-          %li=lang
-    %li
-      %h4 Stilmallsspråk
-      %ul
-        - ['CSS', 'Sass'].each do |lang|
-          %li=lang
-    %li
-      %h4 Skriptspråk
-      %ul
-        - ['JavaScript', 'CoffeeScript', 'TypeScript'].each do |lang|
-          %li=lang
-    %li
-      %h4 Bakgrundsspråk
-      %ul
-        - ['PHP', 'Python', 'Ruby'].each do |lang|
-          %li=lang
-    %li
-      %h4 Applikationsspråk
-      %ul
-        - ['C#', 'Windows Forms', 'Windows Presentation Foundation', 'Objective-C', 'Swift'].each do |lang|
-          %li=lang
-    %li
-      %h4 Programmeringsmiljöer
-      %ul
-        - ['Ember', 'Flask', 'Laravel', 'Middleman', 'Rails', 'Vue'].each do |env|
-          %li=env
+    - technology[:languages][:items].each do |tech|
+      %li
+        %h4= tech[:title]
+        %ul
+          - tech[:items].each do |item|
+            %li= item
 
 %section
-  %h2 Övrig information
+  %h2= miscellaneous[:title]
   %ul
-    %li
-      B-körkort, samt tillgång till bil
+    - miscellaneous[:items].each do |item|
+      %li= item

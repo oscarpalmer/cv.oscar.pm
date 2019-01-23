@@ -1,0 +1,127 @@
+sv:
+  general:
+    title: Allmän information
+    items:
+      -
+        title: Namn
+        value: Oscar Carl Anders Palmér
+      -
+        title: Födelsedatum
+        value: 2a Januari, 1992
+      -
+        title: Adress
+        value: Alskogsgatan 10, 52338, Ulricehamn
+      -
+        title: Telefonnummer
+        value: <a class="link" href="tel:+46705692546">+46705692546</a>
+      -
+        title: Email
+        value: <a class="link" href="mailto:opalmer@me.com">opalmer@me.com</a>
+      -
+        title: Webbsida
+        value: <a class="link" href="https://oscar.pm">oscar.pm</a>
+
+  work:
+    title: Arbetslivserfarenhet
+    items:
+      -
+        date: 2015
+        employer: Lernia AB
+        description: Temporära konsultanställningar hos Autotube AB och Parker Hannifin
+      -
+        date: 2014&ndash;2015
+        employer: Seger Europe AB
+        description: Maskinoperatör; underhöll maskiner och tillverkade textilprodukter
+      -
+        date: 2014
+        employer: LK Pex AB
+        description: Producerade, packade, och kvalitetstestade plast- och gummirör
+      -
+        date: 2011
+        employer: Bogesunds Data & Elektronik AB
+        description: Praktik via gymnasieutbildning; reparerade och byggde datorer
+      -
+        date: 2008
+        employer: Hesters Äldreboende
+        description: Sommarjobb; diskade, städade, tvättade, och umgicks med de boende
+
+  education:
+    title: Utbildning
+    items:
+      -
+        date: 2016&ndash;2019
+        school: Systemvetenskap
+        description: Högskolan i Borås
+      -
+        date: 2011&ndash;2012
+        school: Innovativ Programmering
+        description: Linköpings Universitet; ofullständig utbildning
+      -
+        date: 2008&ndash;2011
+        school: Teknik, teoretisk inriktning
+        description: Tingsholmsgymnasiet
+
+  languages:
+    title: Språkkunskaper
+    items:
+      -
+        name: Svenska
+        description: Flytande i både tal och skrift; modersmål
+      -
+        name: Engelska
+        description: Flytande i både tal och skrift
+      -
+        name: Tyska
+        description: Grundläggande kunskaper
+      -
+        name: Spanska
+        description: Grundläggande kunskaper
+
+  technology:
+    title: Teknologiska kunskaper
+    items:
+      -
+        name: Adobe
+        example: InDesign, Photoshop, etc.
+        description: Goda kunskaper
+      -
+        name: Microsoft Office
+        example: Excel, Word, etc.
+        description: Goda kunskaper
+      -
+        name: Operativsystem
+        example: Windows &amp; Unix
+        description: Mycket goda kunskaper
+    description:
+      -
+        Jag har även stor erfarenhet inom utveckling i olika former, främst för webben, men även klassiska miljöer. Gällande webbutveckling är jag mycket van vid märkspråk, stilmallsspråk, och skriptspråk, samt olika bakgrundsspråk och miljöer
+      -
+        Servermiljöer jag vanligtvis använder mig av är Apache och JAMstack (Netlify, Zeit, etc.), men har även publicerat webbapplikationer ovanpå nginx, samt utvecklat andra sådana med hjälp av IIS.
+      -
+        Gällande utveckling för klassiska miljöer &ndash; ej webbaserat &ndash;  har jag utvecklat applikationer för både Windows och iOS.
+    languages:
+      title: Programmeringsspråk och miljöer
+      items:
+        -
+          title: Märkspråk
+          items: ['HTML', 'Erubis', 'Haml', 'Handlebars']
+        -
+          title: Stilmallsspråk
+          items: ['CSS', 'Sass']
+        -
+          title: Skriptspråk
+          items: ['JavaScript', 'CoffeeScript', 'TypeScript']
+        -
+          title: Bakgrundsspråk
+          items: ['PHP', 'Python', 'Ruby']
+        -
+          title: Applikationsspråk
+          items: ['C#', 'Windows Forms', 'Windows Presentation Foundation', 'Objective-C', 'Swift']
+        -
+          title: Programmeringsmiljöer
+          items: ['Ember', 'Flask', 'Laravel', 'Middleman', 'Rails', 'Vue']
+
+  miscellaneous:
+    title: Övrig information
+    items:
+      - B-körkort, samt tillgång till bil
