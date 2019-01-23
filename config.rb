@@ -45,6 +45,10 @@ page '/*.xml',    layout: false
 # Ignore a directory index for the error page
 page '/404.html', directory_index: false
 
+# Haml configuration
+set :haml, { format: :html5 }
+Haml::TempleEngine.disable_option_validator!
+
 # Where Middleman will look for assets
 set :css_dir,    config[:anu]['folders']['stylesheets']
 set :fonts_dir,  config[:anu]['folders']['fonts']
