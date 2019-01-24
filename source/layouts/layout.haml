@@ -1,29 +1,24 @@
-- body = 'sans-serif'
-- container = 'w100-s mw7-ns center'
-
-- header = container + ' pa3-s pa4-ns mb3-s mb4-ns bb b--black-20 relative'
-- title = 'mv0 f5 lh-solid'
-- subtitle = 'mv0 f6 i normal absolute top-1-s top-2-ns right-1-s right-2-ns'
-
-- main = container + ''
-
-- footer = container + ' ph3 bt b--black-20'
-- copyright = ''
+- lang = I18n.t :lang
 
 !!! 5
-%html{ lang: 'en' }
+%html{ lang: I18n.locale.to_s }
   = partial 'partials/head'
 
 %body
 
   %header{ role: 'banner' }
     %h1
-      %a{ href: '.' } Oscar Palmér
+      %a{ href: lang[:url][:current] } Oscar Palmér
     %h2 Curriculum Vitae
+    %p
+      %a{ href: lang[:url][:next] }= lang[:text]
 
   %main{ role: 'main' }= yield
 
   %footer{ role: 'contentinfo' }
     %p
       &copy; 2019,
-      %a{ href: 'https://oscar.pm' } Oscar Palmér
+      %a{ class: 'link', href: 'https://oscar.pm' } Oscar Palmér
+    %p
+      = I18n.t(:footer)[:github]
+      %a{ class: 'link', href: 'https://github.com/oscarpalmer/cv.oscar.pm' } GitHub.

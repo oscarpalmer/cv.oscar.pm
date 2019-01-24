@@ -1,3 +1,11 @@
+headings:
+  - markup
+  - styles
+  - scripts
+  - backends
+  - apps
+  - envs
+
 items:
   -
     -

@@ -1,97 +1,110 @@
 sv:
-  general:
-    title: Allmän information
-    birthday: 2a Januari, 1992
+  lang:
+    text: Do you prefer English?
+    url:
+      current: '.'
+      next: en
 
-  work:
-    title: Arbetslivserfarenhet
-    items:
-      -
-        date: 2015
-        employer: Lernia AB
-        description: Temporära konsultanställningar hos Autotube AB och Parker Hannifin
-      -
-        date: 2014&ndash;2015
-        employer: Seger Europe AB
-        description: Maskinoperatör; underhöll maskiner och tillverkade textilprodukter
-      -
-        date: 2014
-        employer: LK Pex AB
-        description: Producerade, packade, och kvalitetstestade plast- och gummirör
-      -
-        date: 2011
-        employer: Bogesunds Data & Elektronik AB
-        description: Praktik via gymnasieutbildning; reparerade och byggde datorer
-      -
-        date: 2008
-        employer: Hesters Äldreboende
-        description: Sommarjobb; diskade, städade, tvättade, och umgicks med de boende
+  meta:
+    description: CV:et för Oscar Palmér, en svensk utvecklare.
 
-  education:
-    title: Utbildning
-    items:
-      -
-        date: 2016&ndash;2019
-        school: Systemvetenskap
-        description: Högskolan i Borås
-      -
-        date: 2011&ndash;2012
-        school: Innovativ Programmering
-        description: Linköpings Universitet; ofullständig utbildning
-      -
-        date: 2008&ndash;2011
-        school: Teknik, teoretisk inriktning
-        description: Tingsholmsgymnasiet
+  footer:
+    github: Denna webbsidas <i>(kompletta)</i> källkod finns tillgänglig på
 
-  languages:
-    title: Språkkunskaper
-    items:
-      -
-        title: Svenska
-        description: Flytande i både tal och skrift; modersmål
-      -
-        title: Engelska
-        description: Flytande i både tal och skrift
-      -
-        title: Tyska
-        description: Grundläggande kunskaper
-      -
-        title: Spanska
-        description: Grundläggande kunskaper
+  document:
+    general:
+      title: Allmän information
+      birthday: 2a Januari, 1992
 
-  technology:
-    title: Teknologiska kunskaper
-    items:
-      -
-        title: Adobe
-        example: InDesign, Photoshop, etc.
-        description: Goda kunskaper
-      -
-        title: Microsoft Office
-        example: Excel, Word, etc.
-        description: Goda kunskaper
-      -
-        title: Operativsystem
-        example: Windows &amp; Unix
-        description: Mycket goda kunskaper
-    description:
-      -
-        Jag har även stor erfarenhet av utveckling i olika former, främst för webben, men även klassiska miljöer. Gällande webbutveckling är jag mycket van vid märk, stilmall- och skriptspråk <i>(front-end)</i>, samt olika språk och miljöer för bakgrundsutveckling <i>(back-end)</i>.
-      -
-        Servermiljöer jag vanligtvis använder mig av är <a class="link" href="https://httpd.apache.org">Apache</a> och <a class="link" href="https://jamstack.org">JAMstack</a> <i>(<a class="link" href="https://www.netlify.com">Netlify</a>, <a class="link" href="https://zeit.co/now">Zeit</a>, etc.)</i>, men jag har även publicerat webbapplikationer ovanpå <a class="link" href="https://nginx.org/en/">nginx</a>, samt utvecklat andra sådana med hjälp av <a class="link" href="https://www.iis.net">IIS</a>.
-      -
-        Gällande utveckling för klassiska miljöer &ndash; ej webbaserat &ndash;  har jag utvecklat applikationer för både Windows och iOS.
-    development:
-      title: Programmeringsspråk och miljöer
+    work:
+      title: Arbetslivserfarenhet
       items:
-        - Märkspråk
-        - Stilmallsspråk
-        - Skriptspråk
-        - Bakgrundsspråk
-        - Applikationsspråk
-        - Programmeringsmiljöer
+        -
+          date: 2015
+          employer: Lernia AB
+          description: Temporära konsultanställningar hos Autotube AB och Parker Hannifin
+        -
+          date: 2014&ndash;2015
+          employer: Seger Europe AB
+          description: Maskinoperatör; underhöll maskiner och tillverkade textilprodukter
+        -
+          date: 2014
+          employer: LK Pex AB
+          description: Producerade, packade, och kvalitetstestade plast- och gummirör
+        -
+          date: 2011
+          employer: Bogesunds Data & Elektronik AB
+          description: Praktik via gymnasieutbildning; reparerade och byggde datorer
+        -
+          date: 2008
+          employer: Hesters Äldreboende
+          description: Sommarjobb; diskade, städade, tvättade, och umgicks med de boende
 
-  miscellaneous:
-    title: Övrig information
-    items:
-      - B-körkort, samt tillgång till bil
+    education:
+      title: Utbildning
+      items:
+        -
+          date: 2016&ndash;2019
+          school: Systemvetenskap
+          description: Högskolan i Borås
+        -
+          date: 2011&ndash;2012
+          school: Innovativ Programmering
+          description: Linköpings Universitet; ofullständig utbildning
+        -
+          date: 2008&ndash;2011
+          school: Teknik, teoretisk inriktning
+          description: Tingsholmsgymnasiet
+
+    languages:
+      title: Språkkunskaper
+      items:
+        -
+          title: Svenska
+          description: Flytande i både tal och skrift; modersmål
+        -
+          title: Engelska
+          description: Flytande i både tal och skrift
+        -
+          title: Tyska
+          description: Grundläggande kunskaper
+        -
+          title: Spanska
+          description: Grundläggande kunskaper
+
+    technology:
+      title: Teknologiska kunskaper
+      items:
+        -
+          title: Adobe
+          example: InDesign, Photoshop, etc.
+          description: Goda kunskaper
+        -
+          title: Microsoft Office
+          example: Excel, Word, etc.
+          description: Goda kunskaper
+        -
+          title: Operativsystem
+          example: Windows &amp; Unix
+          description: Mycket goda kunskaper
+      description:
+        -
+          Jag har även stor erfarenhet av utveckling i olika former, främst för webben, men även klassiska miljöer. Gällande webbutveckling är jag mycket van vid märk, stilmall- och skriptspråk <i>(front-end)</i>, samt olika språk och miljöer för bakgrundsutveckling <i>(back-end)</i>.
+        -
+          Servermiljöer jag vanligtvis använder mig av är <a class="link" href="https://httpd.apache.org">Apache</a> och <a class="link" href="https://jamstack.org">JAMstack</a> <i>(<a class="link" href="https://www.netlify.com">Netlify</a>, <a class="link" href="https://zeit.co/now">Zeit</a>, etc.)</i>, men jag har även publicerat webbaserade projekt ovanpå <a class="link" href="https://nginx.org/en/">nginx</a>, samt utvecklat andra sådana med hjälp av <a class="link" href="https://www.iis.net">IIS</a>.
+        -
+          Gällande utveckling för klassiska miljöer &ndash; ej webbaserat &ndash; har jag utvecklat applikationer för både Windows och iOS.
+      development:
+        title: Programmeringsspråk och miljöer
+        items:
+          - Märkspråk
+          - Stilmallsspråk
+          - Skriptspråk
+          - Bakgrundsspråk
+          - Applikationsspråk
+          - Programmeringsmiljöer
+
+    miscellaneous:
+      title: Övrig information
+      items:
+        - B-körkort, samt tillgång till bil

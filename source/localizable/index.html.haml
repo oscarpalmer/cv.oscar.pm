@@ -1,12 +1,13 @@
-- general = I18n.t :general
-- work = I18n.t :work
-- education = I18n.t :education
-- languages = I18n.t :languages
-- technology = I18n.t :technology
-- miscellaneous = I18n.t :miscellaneous
+- document = I18n.t :document
+- general = document[:general]
+- work = document[:work]
+- education = document[:education]
+- languages = document[:languages]
+- technology = document[:technology]
+- miscellaneous = document[:miscellaneous]
 
-%section
-  %h2= general[:title]
+%article{ 'aria-labelledby': 'general-heading', role: 'article' }
+  %h2{ id: 'general-heading' }= general[:title]
   %ul
     %li= data.oscar[:name]
     %li
@@ -19,8 +20,8 @@
     %li
       %a{ class: 'link', href: data.oscar[:website][:value] }= data.oscar[:website][:title]
 
-%section
-  %h2= work[:title]
+%article{ 'aria-labelledby': 'work-heading', role: 'article' }
+  %h2{ id: 'work-heading' }= work[:title]
   %ul
     - work[:items].each do |item|
       %li
@@ -28,8 +29,8 @@
         %i= item[:employer]
         =   item[:description]
 
-%section
-  %h2= education[:title]
+%article{ 'aria-labelledby': 'edu-heading', role: 'article' }
+  %h2{ id: 'edu-heading' }= education[:title]
   %ul
     - education[:items].each do |item|
       %li
@@ -37,8 +38,8 @@
         %i= item[:school]
         =   item[:description]
 
-%section
-  %h2= languages[:title]
+%article{ 'aria-labelledby': 'lang-heading', role: 'article' }
+  %h2{ id: 'lang-heading' }= languages[:title]
   %ul
     - languages[:items].each do |item|
       %li
@@ -46,8 +47,8 @@
         =   item[:description]
 
 
-%section
-  %h2= technology[:title]
+%article{ 'aria-labelledby': 'tech-heading', role: 'article' }
+  %h2{ id: 'tech-heading' }= technology[:title]
   %ul
     - technology[:items].each do |item|
       %li
@@ -60,14 +61,14 @@
   %ul
     - technology[:development][:items].each_with_index do |dev, index|
       %li
-        %h4= dev
-        %ul
+        %h4{ id: data.dev[:headings][index] + '-heading' }= dev
+        %ul{ 'aria-labelledby': data.dev[:headings][index] + '-heading' }
           - data.dev[:items][index].each do |item|
             %li
               %a{ class: 'link', href: item[:value] }= item[:title]
 
-%section
-  %h2= miscellaneous[:title]
+%article{ 'aria-labelledby': 'misc-heading', role: 'article' }
+  %h2{ id: 'misc-heading' }= miscellaneous[:title]
   %ul
     - miscellaneous[:items].each do |item|
       %li= item

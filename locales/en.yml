@@ -1,0 +1,110 @@
+en:
+  lang:
+    text: Föredrar ni svenska?
+    url:
+      current: 'en'
+      next: '.'
+
+  meta:
+    description: The curriculum vitae for Swedish developer, Oscar Palmér.
+
+  footer:
+    github: This website's <i>(complete)</i> source code is available on
+
+  document:
+    general:
+      title: General information
+      birthday: January 2nd, 1992
+
+    work:
+      title: Work experience
+      items:
+        -
+          date: 2015
+          employer: Lernia AB
+          description: Temporary consultancy positions at Autotube AB and Parker Hannifin
+        -
+          date: 2014&ndash;2015
+          employer: Seger Europe AB
+          description: Machine operator; maintenance of machines and production of textile articles
+        -
+          date: 2014
+          employer: LK Pex AB
+          description: Production, packaging, and quality control for plastic and rubber-based pipes
+        -
+          date: 2011
+          employer: Bogesunds Data & Elektronik AB
+          description: Internship provided through gymnasial education; repaired and built computers
+        -
+          date: 2008
+          employer: Hesters Äldreboende
+          description: Summer job at a retirement home; household duties and keeping the residents' company
+
+    education:
+      title: Education
+      items:
+        -
+          date: 2016&ndash;2019
+          school: System science
+          description: Högskolan i Borås
+        -
+          date: 2011&ndash;2012
+          school: Innovative Programming
+          description: Linköpings Universitet; incomplete education
+        -
+          date: 2008&ndash;2011
+          school: Technics, theoretical orientation
+          description: Tingsholmsgymnasiet
+
+    languages:
+      title: Languages
+      items:
+        -
+          title: Swedish
+          description: Fluent in both writing and speech; native language
+        -
+          title: English
+          description: Fluent in both writing and speech
+        -
+          title: German
+          description: Basic knowledge
+        -
+          title: Spanish
+          description: Basic knowledge
+
+    technology:
+      title: Technical skills
+      items:
+        -
+          title: Adobe
+          example: InDesign, Photoshop, etc.
+          description: Knowledgeable
+        -
+          title: Microsoft Office
+          example: Excel, Word, etc.
+          description: Knowledgeable
+        -
+          title: Operating systems
+          example: Windows &amp; Unix
+          description: Very knowledgeable
+      description:
+        -
+          I have a lot of experience as a developer, particularly for the web, but also for native environments. With regards to web development I'm quite comfortable with markup, stylesheet, and script languages, as well as various backend languages and environments.
+        -
+          Server environments I frequently make use of are <a class="link" href="https://httpd.apache.org">Apache</a> and <a class="link" href="https://jamstack.org">JAMstack</a> <i>(<a class="link" href="https://www.netlify.com">Netlify</a>, <a class="link" href="https://zeit.co/now">Zeit</a>, etc.)</i>, but I have also published webbased projects on top of <a class="link" href="https://nginx.org/en/">nginx</a>, as well as developed others with the help of <a class="link" href="https://www.iis.net">IIS</a>.
+        -
+          Regarding native development &ndash; non-webbased &ndash; I have also developed applications for both Windows and iOS.
+      development:
+        title: Programming languages and environments
+        items:
+          - Markup
+          - Stylesheets
+          - Scripting
+          - Back-end
+          - Application
+          - Environments
+
+    miscellaneous:
+      title: Miscellaneous information
+      items:
+        - I have a valid driver's license, as well as access to my own car

@@ -16,7 +16,9 @@ activate :external_pipeline,
   latency: 1
 
 # Localisation
-activate :i18n, langs: [:sv], mount_at_root: :sv
+activate :i18n,
+  locales: [:en, :sv],
+  mount_at_root: :sv
 
 # Live reloading of assets (CSS, JS) during development
 activate :livereload

@@ -1,3 +1,5 @@
+- meta = I18n.t :meta
+
 %base{ href: '/' }
 %meta{ charset: 'utf-8' }
 %meta{ 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' }
@@ -5,5 +7,5 @@
 %title
   CV &bull; Oscar Palmér
 %meta{ name: 'author', content: 'Oscar Palmér' }
-%meta{ name: 'description', content: 'The curriculum vitae for Swedish developer, Oscar Palmér.' }
+%meta{ name: 'description', content: meta[:description] }
 = stylesheet_link_tag :cv
