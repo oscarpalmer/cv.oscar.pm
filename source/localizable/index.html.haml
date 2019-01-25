@@ -1,74 +1,93 @@
-- document = I18n.t :document
-- general = document[:general]
-- work = document[:work]
-- education = document[:education]
-- languages = document[:languages]
-- technology = document[:technology]
-- miscellaneous = document[:miscellaneous]
 
-%article{ 'aria-labelledby': 'general-heading', role: 'article' }
-  %h2{ id: 'general-heading' }= general[:title]
-  %ul
-    %li= data.oscar[:name]
-    %li
+-# Localisation data
+-  document = I18n.t :document
+-  general = document[:general]
+-  work = document[:work]
+-  education = document[:education]
+-  languages = document[:languages]
+-  technology = document[:technology]
+-  miscellaneous = document[:miscellaneous]
+
+-# Styling with Tachyons' classes
+-  article = ''
+-  article_h2 = ''
+-  article_h3 = ''
+-  article_h4 = ''
+-  article_ul = 'list'
+-  article_li = ''
+-  article_b = ''
+-  article_i = ''
+-  article_p = ''
+-  article_links_ul = 'list'
+-  article_links_li = ''
+
+%article{ role: 'article', 'aria-labelledby': 'general-heading', class: article }
+  %h2{ id: 'general-heading', class: article_h2 }= general[:title]
+  %ul{ class: article_ul }
+    %li{ class: article_li }= data.oscar[:name]
+    %li{ class: article_li }
       %time{ datetime: '1992-01-02' }= general[:birthday]
-    %li= data.oscar[:address]
-    %li
+    %li{ class: article_li }= data.oscar[:address]
+    %li{ class: article_li }
       %a{ class: 'link', href: data.oscar[:phone][:value] }= data.oscar[:phone][:title]
-    %li
+    %li{ class: article_li }
       %a{ class: 'link', href: data.oscar[:email][:value] }= data.oscar[:email][:title]
-    %li
+    %li{ class: article_li }
       %a{ class: 'link', href: data.oscar[:website][:value] }= data.oscar[:website][:title]
 
-%article{ 'aria-labelledby': 'work-heading', role: 'article' }
-  %h2{ id: 'work-heading' }= work[:title]
-  %ul
+%article{ role: 'article', 'aria-labelledby': 'work-heading', class: article }
+  %h2{ id: 'work-heading', class: article_h2 }= work[:title]
+  %ul{ class: article_ul }
     - work[:items].each do |item|
-      %li
-        %b= item[:date]
-        %i= item[:employer]
-        =   item[:description]
+      %li{ class: article_li }
+        %b{ class: article_b }= item[:date]
+        %i{ class: article_i }= item[:employer]
+        = item[:description]
 
-%article{ 'aria-labelledby': 'edu-heading', role: 'article' }
-  %h2{ id: 'edu-heading' }= education[:title]
-  %ul
+%article{ role: 'article', 'aria-labelledby': 'edu-heading', class: article }
+  %h2{ id: 'edu-heading', class: article_h2 }= education[:title]
+  %ul{ class: article_ul }
     - education[:items].each do |item|
-      %li
-        %b= item[:date]
-        %i= item[:school]
-        =   item[:description]
+      %li{ class: article_li }
+        %b{ class: article_b }= item[:date]
+        %i{ class: article_i }= item[:school]
+        = item[:description]
 
-%article{ 'aria-labelledby': 'lang-heading', role: 'article' }
-  %h2{ id: 'lang-heading' }= languages[:title]
-  %ul
+%article{ role: 'article', 'aria-labelledby': 'lang-heading', class: article }
+  %h2{ id: 'lang-heading', class: article_h2 }= languages[:title]
+  %ul{ class: article_ul }
     - languages[:items].each do |item|
-      %li
-        %b= item[:title]
-        =   item[:description]
+      %li{ class: article_li }
+        %b{ class: article_b }= item[:title]
+        = item[:description]
 
 
-%article{ 'aria-labelledby': 'tech-heading', role: 'article' }
-  %h2{ id: 'tech-heading' }= technology[:title]
-  %ul
+%article{ role: 'article', 'aria-labelledby': 'tech-heading', class: article }
+  %h2{ id: 'tech-heading', class: article_h2 }= technology[:title]
+
+  %ul{ class: article_ul }
     - technology[:items].each do |item|
-      %li
-        %b= item[:title]
-        %i= item[:example]
-        =   item[:description]
+      %li{ class: article_li }
+        %b{ class: article_b }= item[:title]
+        %i{ class: article_i }= item[:example]
+        = item[:description]
+
   - technology[:description].each do |desc|
-    %p= desc
-  %h3= technology[:development][:title]
-  %ul
+    %p{ class: article_p }= desc
+
+  %h3{ class: article_h3 }= technology[:development][:title]
+  %ul{ class: article_ul }
     - technology[:development][:items].each_with_index do |dev, index|
-      %li
-        %h4{ id: data.dev[:headings][index] + '-heading' }= dev
-        %ul{ 'aria-labelledby': data.dev[:headings][index] + '-heading' }
+      %li{ class: article_li }
+
+        %h4{ id: data.dev[:headings][index] + '-heading', class: article_h4 }= dev
+        %ul{ 'aria-labelledby': data.dev[:headings][index] + '-heading', class: article_links_ul }
           - data.dev[:items][index].each do |item|
-            %li
+            %li{ class: article_links_li }
               %a{ class: 'link', href: item[:value] }= item[:title]
 
-%article{ 'aria-labelledby': 'misc-heading', role: 'article' }
-  %h2{ id: 'misc-heading' }= miscellaneous[:title]
-  %ul
+%article{ role: 'article', 'aria-labelledby': 'misc-heading', class: article }
+  %h2{ id: 'misc-heading', class: article_h2 }= miscellaneous[:title]
+  %ul{ class: article_ul }
     - miscellaneous[:items].each do |item|
-      %li= item
+      %li{ class: article_li }= item

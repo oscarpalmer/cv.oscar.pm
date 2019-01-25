@@ -1,24 +1,52 @@
-- lang = I18n.t :lang
+
+-# Localisation data
+-  lang = I18n.t :lang
+
+-# Localisation specifics
+-  suffix = current_page.url =~ /\A\/(|en\/)about\/\z/ ? '/about' : ''
+-  lang_url = lang[:urls][:next] + suffix
+
+-# Styling with Tachyons' classes
+-  body = ''
+-  wrapper = ''
+
+-  header = ''
+-  header_h1 = ''
+-  header_h2 = ''
+-  header_nav = ''
+-  header_ul = 'list'
+-  header_li = ''
+
+-  main = ''
+
+-  footer = ''
+-  footer_copy = ''
+-  footer_github = ''
 
 !!! 5
 %html{ lang: I18n.locale.to_s }
   = partial 'partials/head'
 
-%body
+  %body{ class: body }
 
-  %header{ role: 'banner' }
-    %h1
-      %a{ href: lang[:url][:current] } Oscar Palmér
-    %h2 Curriculum Vitae
-    %p
-      %a{ href: lang[:url][:next] }= lang[:text]
+    %header{ role: 'banner', class: header }
+      %h1{ class: header_h1 }
+        %a{ class: 'link', href: lang[:urls][:current] } Oscar Palmér
+      %h2{ class: header_h2 } Curriculum Vitae
 
-  %main{ role: 'main' }= yield
+      %nav{ role: 'navigation', class: header_nav }
+        %ul{ class: header_ul }
+          %li{ class: header_li }
+            %a{ class: 'link', href: lang[:urls][:about] }= lang[:about]
+          %li{ class: header_li }
+            %a{ class: 'link', href: lang_url }= lang[:text]
 
-  %footer{ role: 'contentinfo' }
-    %p
-      &copy; 2019,
-      %a{ class: 'link', href: 'https://oscar.pm' } Oscar Palmér
-    %p
-      = I18n.t(:footer)[:github]
-      %a{ class: 'link', href: 'https://github.com/oscarpalmer/cv.oscar.pm' } GitHub.
+    %main{ role: 'main', class: main }= yield
+
+    %footer{ role: 'contentinfo', class: footer }
+      %p{ class: footer_copy }
+        &copy; 2019,
+        %a{ class: 'link', href: 'https://oscar.pm' } Oscar Palmér
+      %p{ class: footer_github }
+        = I18n.t(:footer)[:github]
+        %a{ class: 'link', href: 'https://github.com/oscarpalmer/cv.oscar.pm' } GitHub.

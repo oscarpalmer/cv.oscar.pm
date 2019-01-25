@@ -1,15 +1,23 @@
 sv:
   lang:
+    about: Om sidan
     text: Do you prefer English?
-    url:
+    urls:
+      about: about
       current: '.'
       next: en
+      next_about: en/about
 
   meta:
     description: CV:et för Oscar Palmér, en svensk utvecklare.
 
   footer:
     github: Denna webbsidas <i>(kompletta)</i> källkod finns tillgänglig på
+
+  about:
+    - En paragraf
+    - En till
+    - Och en sista
 
   document:
     general:
@@ -88,12 +96,9 @@ sv:
           example: Windows &amp; Unix
           description: Mycket goda kunskaper
       description:
-        -
-          Jag har även stor erfarenhet av utveckling i olika former, främst för webben, men även klassiska miljöer. Gällande webbutveckling är jag mycket van vid märk, stilmall- och skriptspråk <i>(front-end)</i>, samt olika språk och miljöer för bakgrundsutveckling <i>(back-end)</i>.
-        -
-          Servermiljöer jag vanligtvis använder mig av är <a class="link" href="https://httpd.apache.org">Apache</a> och <a class="link" href="https://jamstack.org">JAMstack</a> <i>(<a class="link" href="https://www.netlify.com">Netlify</a>, <a class="link" href="https://zeit.co/now">Zeit</a>, etc.)</i>, men jag har även publicerat webbaserade projekt ovanpå <a class="link" href="https://nginx.org/en/">nginx</a>, samt utvecklat andra sådana med hjälp av <a class="link" href="https://www.iis.net">IIS</a>.
-        -
-          Gällande utveckling för klassiska miljöer &ndash; ej webbaserat &ndash; har jag utvecklat applikationer för både Windows och iOS.
+        - Jag har även stor erfarenhet av utveckling i olika former, främst för webben, men även klassiska miljöer. Gällande webbutveckling är jag mycket van vid märk, stilmall- och skriptspråk <i>(front-end)</i>, samt olika språk och miljöer för bakgrundsutveckling <i>(back-end)</i>.
+        - Servermiljöer jag vanligtvis använder mig av är <a class="link" href="https://httpd.apache.org">Apache</a> och <a class="link" href="https://jamstack.org">JAMstack</a> <i>(<a class="link" href="https://www.netlify.com">Netlify</a>, <a class="link" href="https://zeit.co/now">Zeit</a>, etc.)</i>, men jag har även publicerat webbaserade projekt ovanpå <a class="link" href="https://nginx.org/en/">nginx</a>, samt utvecklat andra sådana med hjälp av <a class="link" href="https://www.iis.net">IIS</a>.
+        - Gällande utveckling för klassiska miljöer &ndash; ej webbaserat &ndash; har jag utvecklat applikationer för både Windows och iOS.
       development:
         title: Programmeringsspråk och miljöer
         items:

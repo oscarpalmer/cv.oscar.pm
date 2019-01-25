@@ -1,15 +1,23 @@
 en:
   lang:
+    about: About this site
     text: Föredrar ni svenska?
-    url:
-      current: 'en'
+    urls:
+      about: en/about
+      current: en
       next: '.'
+      next_about: about
 
   meta:
     description: The curriculum vitae for Swedish developer, Oscar Palmér.
 
   footer:
     github: This website's <i>(complete)</i> source code is available on
+
+  about:
+    - A paragraph
+    - One more
+    - And a final one
 
   document:
     general:

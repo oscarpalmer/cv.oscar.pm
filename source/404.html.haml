@@ -1,1 +1,14 @@
-%h2 404!
+
+-# Styling with Tachyons' classes
+-  error_h2 = ''
+-  error_p = ''
+
+%h2{ class: error_h2 } 404!
+
+%p{ class: 'sv_p ' + error_p }
+  Hoppsan; sidan ni ville besöka finns inte, eller så har jag tappat bort den någonstans&hellip;
+  det kanske är bäst att <a class="link" href=".">återvända hem</a>?
+
+%p{ class: 'en_p ' + error_p }
+  Oops; the page you wanted to visit doesn't exist, or maybe I've lost it somewhere&hellip;
+  perhaps it'd be best to <a class="link" href="en">return home</a>?
