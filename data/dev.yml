@@ -11,9 +11,11 @@ items:
     -
       title: HTML
       value: https://www.w3.org/html/
+      starred: true
     -
       title: ERB
       value: https://docs.ruby-lang.org/en/trunk/ERB.html
+      starred: true
     -
       title: Haml
       value: http://haml.info
@@ -24,13 +26,16 @@ items:
     -
       title: CSS
       value: https://www.w3.org/Style/CSS/Overview.en.html
+      starred: true
     -
       title: Sass
       value: https://sass-lang.com
+      starred: true
   -
     -
       title: JavaScript
       value: https://developer.mozilla.org/en-US/docs/Web/javascript
+      starred: true
     -
       title: CoffeeScript
       value: https://coffeescript.org
@@ -41,22 +46,26 @@ items:
     -
       title: PHP
       value: https://secure.php.net
+      starred: true
     -
       title: Python
       value: https://www.python.org
     -
       title: Ruby
       value: https://www.ruby-lang.org/en/
+      starred: true
   -
     -
       title: C#
       value: https://en.wikipedia.org/wiki/C_Sharp_%28programming_language%29
+      starred: true
     -
       title: Windows Forms
       value: https://en.wikipedia.org/wiki/Windows_Forms
     -
-      title: Windows Presentation Foundation
+      title: WPF
       value: https://en.wikipedia.org/wiki/Windows_Presentation_Foundation
+      starred: true
     -
       title: Objective-C
       value: https://en.wikipedia.org/wiki/Objective-C
@@ -76,6 +85,7 @@ items:
     -
       title: Middleman
       value: https://middlemanapp.com
+      starred: true
     -
       title: Rails
       value: https://rubyonrails.org

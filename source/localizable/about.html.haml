@@ -1,6 +1,6 @@
 
--# Styling with Tachyons' classes
--  about_p = ''
+%h1{ class: 'pa3 pb0 pa4-l pb3-l mv0 bt bw1 b--black-30 f3 normal' }= I18n.t(:lang)[:about]
 
-- I18n.t(:about).each do |paragraph|
-  %p{ class: about_p }= paragraph
+- I18n.t(:about).each_with_index do |paragraph, index|
+  - last = index == 2 ? ' mb4-l' : ''
+  %p{ class: 'ph3 ph4-l mv3 lh-copy' + last }= paragraph

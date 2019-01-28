@@ -3,50 +3,33 @@
 -  lang = I18n.t :lang
 
 -# Localisation specifics
--  suffix = current_page.url =~ /\A\/(|en\/)about\/\z/ ? '/about' : ''
--  lang_url = lang[:urls][:next] + suffix
-
--# Styling with Tachyons' classes
--  body = ''
--  wrapper = ''
-
--  header = ''
--  header_h1 = ''
--  header_h2 = ''
--  header_nav = ''
--  header_ul = 'list'
--  header_li = ''
-
--  main = ''
-
--  footer = ''
--  footer_copy = ''
--  footer_github = ''
+-  lang_url = current_page.url =~ /(om-sidan|about)\/\z/ ? lang[:urls][:about][:next] : lang[:urls][:index][:next]
 
 !!! 5
 %html{ lang: I18n.locale.to_s }
   = partial 'partials/head'
 
-  %body{ class: body }
+  %body{ class: 'sans-serif' }
 
-    %header{ role: 'banner', class: header }
-      %h1{ class: header_h1 }
-        %a{ class: 'link', href: lang[:urls][:current] } Oscar Palmér
-      %h2{ class: header_h2 } Curriculum Vitae
+    .wrapper
+      %header{ role: 'banner', class: 'mw7 pa3 pa4-l center lh-solid relative' }
+        %h1{ class: 'mt0 mb3 f5' }
+          %a{ class: 'link', href: lang[:urls][:index][:base] } Curriculum Vitae
+        %h2{ class: 'subtitle mv0 gray f5 i normal' } Oscar Palmér
 
-      %nav{ role: 'navigation', class: header_nav }
-        %ul{ class: header_ul }
-          %li{ class: header_li }
-            %a{ class: 'link', href: lang[:urls][:about] }= lang[:about]
-          %li{ class: header_li }
-            %a{ class: 'link', href: lang_url }= lang[:text]
+        %nav{ role: 'navigation', class: 'nav' }
+          %ul{ class: 'list pl0 mv0 cf' }
+            %li{ class: 'mr3 fl' }
+              %a{ class: 'link', href: lang[:urls][:about][:base] }= lang[:about]
+            %li{ class: 'fl' }
+              %a{ class: 'link', href: lang_url }= lang[:text]
 
-    %main{ role: 'main', class: main }= yield
+      %main{ role: 'main', class: 'mw7 center' }= yield
 
-    %footer{ role: 'contentinfo', class: footer }
-      %p{ class: footer_copy }
+    %footer{ role: 'contentinfo', class: 'mw7 pa3 pa4-l center bt bw1 b--black-20 f6 cf' }
+      %p{ class: 'mt0 mb2 mb0-l gray lh-solid fl-l' }
         &copy; 2019,
         %a{ class: 'link', href: 'https://oscar.pm' } Oscar Palmér
-      %p{ class: footer_github }
+      %p{ class: 'mv0 gray lh-title fr-l' }
         = I18n.t(:footer)[:github]
         %a{ class: 'link', href: 'https://github.com/oscarpalmer/cv.oscar.pm' } GitHub.

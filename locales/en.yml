@@ -3,10 +3,12 @@ en:
     about: About this site
     text: Föredrar ni svenska?
     urls:
-      about: en/about
-      current: en
-      next: '.'
-      next_about: about
+      index:
+        base: en
+        next: .
+      about:
+        base: en/about
+        next: om-sidan
 
   meta:
     description: The curriculum vitae for Swedish developer, Oscar Palmér.
@@ -15,14 +17,21 @@ en:
     github: This website's <i>(complete)</i> source code is available on
 
   about:
-    - A paragraph
-    - One more
-    - And a final one
+    - This site was created as a digital CV and resumé for me – <a class="link" href="https://oscar.pm">Oscar Palmér</a>! – to make it all accessible, not just for job searching, but also when applying other fun things.
+    - It was developed with <a class="link" href="https://middlemanapp.com">Middleman</a> as a foundation, along with <a class="link" href="https://github.com/oscarpalmer/anu">my own project template</a>, which includes many useful tools, e.g. <a class="link" href="http://haml.info">Haml</a> and <a class="link" href="https://sass-lang.com">Sass</a>, and I'm also using <a class="link" href="https://tachyons.io/">Tachyons</a>. If this sounds weird – or even interesting – you're more than welcome to check out <a class="link" href="https://github.com/oscarpalmer/cv.oscar.pm">the site's source code on GitHub</a>.
+    - I think that's it… have a nice day!
 
   document:
     general:
       title: General information
       birthday: January 2nd, 1992
+      titles:
+        - Name
+        - Birthdate
+        - Address
+        - Phone
+        - Email
+        - Website
 
     work:
       title: Work experience
@@ -30,7 +39,7 @@ en:
         -
           date: 2015
           employer: Lernia AB
-          description: Temporary consultancy positions at Autotube AB and Parker Hannifin
+          description: Temporary consultancy positions at <i>Autotube AB</i> and <i>Parker Hannifin</i>
         -
           date: 2014&ndash;2015
           employer: Seger Europe AB
@@ -38,11 +47,11 @@ en:
         -
           date: 2014
           employer: LK Pex AB
-          description: Production, packaging, and quality control for plastic and rubber-based pipes
+          description: Production, packaging, and quality control for plastic and rubber-based tubing
         -
           date: 2011
           employer: Bogesunds Data & Elektronik AB
-          description: Internship provided through gymnasial education; repaired and built computers
+          description: Internship provided through upper secondary education; repaired and built computers
         -
           date: 2008
           employer: Hesters Äldreboende
@@ -53,23 +62,23 @@ en:
       items:
         -
           date: 2016&ndash;2019
-          school: System science
-          description: Högskolan i Borås
+          program: <b class="dark">System science</b>; business, management, development, and <abbr class="i" title="Human-computer interaction">HCI</abbr>
+          school: Högskolan i Borås
         -
           date: 2011&ndash;2012
-          school: Innovative Programming
-          description: Linköpings Universitet; incomplete education
+          program: <i class="b dark">“Innovativ Programmering”</i>; <i>CS</i>-like, programming-oriented; incomplete education
+          school: Linköpings Universitet
         -
           date: 2008&ndash;2011
-          school: Engineering technology, theoretical orientation
-          description: Tingsholmsgymnasiet
+          program: <b class="dark">Engineering technology</b>, theoretical orientation; upper secondary school
+          school: Tingsholmsgymnasiet
 
     languages:
       title: Languages
       items:
         -
           title: Swedish
-          description: Fluent in both writing and speech; native language
+          description: Fluent in both writing and speech
         -
           title: English
           description: Fluent in both writing and speech
@@ -85,23 +94,22 @@ en:
       items:
         -
           title: Adobe
-          example: InDesign, Photoshop, etc.
+          example: Photoshop, etc.
           description: Knowledgeable
         -
           title: Microsoft Office
-          example: Excel, Word, etc.
+          example: Word, etc.
           description: Knowledgeable
         -
           title: Operating systems
           example: Windows &amp; Unix
           description: Very knowledgeable
       description:
-        -
-          I have a lot of experience as a developer, particularly for the web, but also for native environments. With regards to web development I'm quite comfortable with markup, stylesheet, and script languages, as well as various backend languages and environments.
-        -
-          Server environments I frequently make use of are <a class="link" href="https://httpd.apache.org">Apache</a> and <a class="link" href="https://jamstack.org">JAMstack</a> <i>(<a class="link" href="https://www.netlify.com">Netlify</a>, <a class="link" href="https://zeit.co/now">Zeit</a>, etc.)</i>, but I have also published webbased projects on top of <a class="link" href="https://nginx.org/en/">nginx</a>, as well as developed others with the help of <a class="link" href="https://www.iis.net">IIS</a>.
-        -
-          Regarding native development &ndash; non-webbased &ndash; I have also developed applications for both Windows and iOS.
+        title: Programming and development
+        paragraphs:
+          - I have a lot of experience as a developer, particularly for the web, but also native environments. With regards to web development I'm quite comfortable with markup, stylesheet, and script languages, as well as various backend languages and environments.
+          - Server environments I frequently make use of are <a class="link" href="https://httpd.apache.org">Apache</a> and <a class="link" href="https://jamstack.org">JAMstack</a> <i class="gray">(<a class="link" href="https://www.netlify.com">Netlify</a>, <a class="link" href="https://zeit.co/now">Zeit</a>, etc.)</i>, but I have also published webbased projects on top of <a class="link" href="https://nginx.org/en/">nginx</a>, as well as developed others with the help of <a class="link" href="https://www.iis.net">IIS</a>.
+          - Regarding native development &ndash; non-webbased &ndash; I have also developed applications for both Windows and iOS.
       development:
         title: Programming languages and environments
         items:
@@ -109,7 +117,7 @@ en:
           - Stylesheets
           - Scripting
           - Back-end
-          - Application
+          - Applications
           - Environments
 
     miscellaneous:

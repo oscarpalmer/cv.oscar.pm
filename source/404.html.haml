@@ -1,14 +1,12 @@
 
 -# Styling with Tachyons' classes
--  error_h2 = ''
--  error_p = ''
+-  error_title = 'pa3 pb0 pa4-l pb0-l mv0 bt bw1 b--black-30 f3 normal'
+-  error_paragraph = 'pr3 pr4-l mv3 mv4-l lh-copy'
 
-%h2{ class: error_h2 } 404!
+%h2{ class: error_title } 404!
 
-%p{ class: 'sv_p ' + error_p }
-  Hoppsan; sidan ni ville besöka finns inte, eller så har jag tappat bort den någonstans&hellip;
-  det kanske är bäst att <a class="link" href=".">återvända hem</a>?
+%p{ class: 'sv ' + error_paragraph }
+  Hoppsan; sidan ni ville besöka finns inte, eller så har jag tappat bort den någonstans&hellip;<br>det kanske är bäst att <a class="link" href=".">återvända hem</a>?
 
-%p{ class: 'en_p ' + error_p }
-  Oops; the page you wanted to visit doesn't exist, or maybe I've lost it somewhere&hellip;
-  perhaps it'd be best to <a class="link" href="en">return home</a>?
+%p{ class: 'en ' + error_paragraph }
+  Oops; the page you wanted to visit doesn't exist, or maybe I've lost it somewhere&hellip;<br>perhaps it'd be best to <a class="link" href="en">return home</a>?

@@ -9,85 +9,107 @@
 -  miscellaneous = document[:miscellaneous]
 
 -# Styling with Tachyons' classes
--  article = ''
--  article_h2 = ''
--  article_h3 = ''
--  article_h4 = ''
--  article_ul = 'list'
--  article_li = ''
--  article_b = ''
--  article_i = ''
--  article_p = ''
--  article_links_ul = 'list'
--  article_links_li = ''
+-  article = 'pv0 ph3 pv3-l ph4-l bt bw1 b--black-20'
+-  article_title = 'mv3 mb4-l dark f3 normal'
+-  article_subtitle = 'mv3 mt4-l dark f4'
+
+-  double_list = 'list pl0 mt0 mb3 lh-solid'
+-  double_item= 'mv2 cf'
+-  double_title = 'double__h3 mv0 mr3 dark f6 tr fl'
+-  double_paragraph = 'double__p mv0 lh-title fr'
+
+-  triple_list = 'list pl0 mt0 mb3'
+-  triple_item = 'mv3 cf'
+-  triple_title = 'triple__h3 hyphen mt0 mb2 dark f4 lh-solid'
+-  triple_subtitle = 'triple__h4 hyphen mv0 gray f6 normal i tr fl'
+-  triple_paragraph = 'triple__p mv0 lh-title fr'
 
 %article{ role: 'article', 'aria-labelledby': 'general-heading', class: article }
-  %h2{ id: 'general-heading', class: article_h2 }= general[:title]
-  %ul{ class: article_ul }
-    %li{ class: article_li }= data.oscar[:name]
-    %li{ class: article_li }
-      %time{ datetime: '1992-01-02' }= general[:birthday]
-    %li{ class: article_li }= data.oscar[:address]
-    %li{ class: article_li }
-      %a{ class: 'link', href: data.oscar[:phone][:value] }= data.oscar[:phone][:title]
-    %li{ class: article_li }
-      %a{ class: 'link', href: data.oscar[:email][:value] }= data.oscar[:email][:title]
-    %li{ class: article_li }
-      %a{ class: 'link', href: data.oscar[:website][:value] }= data.oscar[:website][:title]
+  %h2{ id: 'general-heading', class: article_title }= general[:title]
+  %ul{ class: double_list }
+    %li{ class: double_item}
+      %h3{ class: double_title }= general[:titles][0]
+      %p{ class: double_paragraph }= data.oscar[:name]
+    %li{ class: double_item}
+      %h3{ class: double_title }= general[:titles][1]
+      %p{ class: double_paragraph }
+        %time{ datetime: '1992-01-02' }= general[:birthday]
+    %li{ class: double_item}
+      %h3{ class: double_title }= general[:titles][2]
+      %p{ class: double_paragraph }= data.oscar[:address]
+    %li{ class: double_item}
+      %h3{ class: double_title }= general[:titles][3]
+      %p{ class: double_paragraph }
+        %a{ class: 'link numeric', href: data.oscar[:phone][:value] }= data.oscar[:phone][:title]
+    %li{ class: double_item}
+      %h3{ class: double_title }= general[:titles][4]
+      %p{ class: double_paragraph }
+        %a{ class: 'link', href: data.oscar[:email][:value] }= data.oscar[:email][:title]
+    %li{ class: double_item}
+      %h3{ class: double_title }= general[:titles][5]
+      %p{ class: double_paragraph }
+        %a{ class: 'link', href: data.oscar[:website][:value] }= data.oscar[:website][:title]
 
 %article{ role: 'article', 'aria-labelledby': 'work-heading', class: article }
-  %h2{ id: 'work-heading', class: article_h2 }= work[:title]
-  %ul{ class: article_ul }
+  %h2{ id: 'work-heading', class: article_title }= work[:title]
+  %ul{ class: triple_list }
     - work[:items].each do |item|
-      %li{ class: article_li }
-        %b{ class: article_b }= item[:date]
-        %i{ class: article_i }= item[:employer]
-        = item[:description]
+      %li{ class: triple_item }
+        %h3{ class: triple_title }= item[:date]
+        %h4{ class: triple_subtitle }= item[:employer]
+        %p{ class: triple_paragraph }= item[:description]
 
 %article{ role: 'article', 'aria-labelledby': 'edu-heading', class: article }
-  %h2{ id: 'edu-heading', class: article_h2 }= education[:title]
-  %ul{ class: article_ul }
+  %h2{ id: 'edu-heading', class: article_title }= education[:title]
+  %ul{ class: triple_list }
     - education[:items].each do |item|
-      %li{ class: article_li }
-        %b{ class: article_b }= item[:date]
-        %i{ class: article_i }= item[:school]
-        = item[:description]
+      %li{ class: triple_item }
+        %h3{ class: triple_title }= item[:date]
+        %h4{ class: triple_subtitle }= item[:school]
+        %p{ class: triple_paragraph }= item[:program]
 
 %article{ role: 'article', 'aria-labelledby': 'lang-heading', class: article }
-  %h2{ id: 'lang-heading', class: article_h2 }= languages[:title]
-  %ul{ class: article_ul }
+  %h2{ id: 'lang-heading', class: article_title }= languages[:title]
+  %ul{ class: double_list }
     - languages[:items].each do |item|
-      %li{ class: article_li }
-        %b{ class: article_b }= item[:title]
-        = item[:description]
-
+      %li{ class: double_item}
+        %h3{ class: double_title }= item[:title]
+        %p{ class: double_paragraph }= item[:description]
 
 %article{ role: 'article', 'aria-labelledby': 'tech-heading', class: article }
-  %h2{ id: 'tech-heading', class: article_h2 }= technology[:title]
+  %h2{ id: 'tech-heading', class: article_title }= technology[:title]
 
-  %ul{ class: article_ul }
+  %ul{ class: triple_list }
     - technology[:items].each do |item|
-      %li{ class: article_li }
-        %b{ class: article_b }= item[:title]
-        %i{ class: article_i }= item[:example]
-        = item[:description]
+      %li{ class: triple_item }
+        %h3{ class: triple_title }= item[:title]
+        %h4{ class: triple_subtitle }= item[:example]
+        %p{ class: triple_paragraph }= item[:description]
 
-  - technology[:description].each do |desc|
-    %p{ class: article_p }= desc
+  %h3{ class: article_subtitle }= technology[:description][:title]
+  - technology[:description][:paragraphs].each do |paragraph|
+    %p{ class: 'mv3 lh-copy' }= paragraph
 
-  %h3{ class: article_h3 }= technology[:development][:title]
-  %ul{ class: article_ul }
+  - links = 'links list pl0 cf'
+  - links_item = 'links__item w-50 mv0 fl'
+  - links_title = 'mv3 dark f5 i'
+  - links_list = 'list pl0 mv0 cf'
+  - links_list_item = 'mr1 mb1 fl'
+  - links_link = 'links__link link ph2 pv1 dib br2 f6 b'
+
+  %h3{ class: article_subtitle }= technology[:development][:title]
+  %ul{ class: links }
     - technology[:development][:items].each_with_index do |dev, index|
-      %li{ class: article_li }
-
-        %h4{ id: data.dev[:headings][index] + '-heading', class: article_h4 }= dev
-        %ul{ 'aria-labelledby': data.dev[:headings][index] + '-heading', class: article_links_ul }
+      %li{ class: links_item }
+        %h4{ id: data.dev[:headings][index] + '-heading', class: links_title }= dev
+        %ul{ 'aria-labelledby': data.dev[:headings][index] + '-heading', class: links_list }
           - data.dev[:items][index].each do |item|
-            %li{ class: article_links_li }
-              %a{ class: 'link', href: item[:value] }= item[:title]
+            - starred = item.starred.nil? ? '' : ' starred'
+            %li{ class: links_list_item }
+              %a{ class: links_link + starred, href: item[:value] }= item[:title]
 
 %article{ role: 'article', 'aria-labelledby': 'misc-heading', class: article }
-  %h2{ id: 'misc-heading', class: article_h2 }= miscellaneous[:title]
-  %ul{ class: article_ul }
+  %h2{ id: 'misc-heading', class: article_title }= miscellaneous[:title]
+  %ul{ class: 'custom-list pa0' }
     - miscellaneous[:items].each do |item|
-      %li{ class: article_li }= item
+      %li{ class: '' }= item

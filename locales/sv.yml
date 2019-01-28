@@ -1,12 +1,17 @@
 sv:
+  paths:
+    about: 'om-sidan'
+
   lang:
     about: Om sidan
     text: Do you prefer English?
     urls:
-      about: about
-      current: '.'
-      next: en
-      next_about: en/about
+      index:
+        base: .
+        next: en
+      about:
+        base: om-sidan
+        next: en/about
 
   meta:
     description: CV:et för Oscar Palmér, en svensk utvecklare.
@@ -15,14 +20,21 @@ sv:
     github: Denna webbsidas <i>(kompletta)</i> källkod finns tillgänglig på
 
   about:
-    - En paragraf
-    - En till
-    - Och en sista
+    - Denna sidan är skapad som ett digitalt CV för mig – <a class="link" href="https://oscar.pm">Oscar Palmér</a>! – för att tillgängliggöra allt vad som kan vara intressant, inte bara för jobbsökande, utan även för andra roliga applikationer.
+    - Den utvecklades med grund i <a href="https://middlemanapp.com">Middleman</a>, tillsammans med <a href="https://github.com/oscarpalmer/anu">min egna projektmall</a>, vilket inkluderar många trevliga hjälpmedel, e.g. <a href="http://haml.info">Haml</a> och <a href="https://sass-lang.com">Sass</a>, och jag använder även <a href="https://tachyons.io/">Tachyons</a>. Om ni tycker det låter konstigt – eller t.o.m intressant – så är ni välkomna att kolla in <a href="https://github.com/oscarpalmer/cv.oscar.pm">webbsidans källkod på GitHub</a>.
+    - Det var nog allt, det… ha en trevlig dag!
 
   document:
     general:
       title: Allmän information
       birthday: 2a Januari, 1992
+      titles:
+        - Namn
+        - Födelsedatum
+        - Adress
+        - Telefon
+        - Email
+        - Webbplats
 
     work:
       title: Arbetslivserfarenhet
@@ -30,7 +42,7 @@ sv:
         -
           date: 2015
           employer: Lernia AB
-          description: Temporära konsultanställningar hos Autotube AB och Parker Hannifin
+          description: Temporära konsultanställningar hos <i>Autotube AB</i> och <i>Parker Hannifin</i>
         -
           date: 2014&ndash;2015
           employer: Seger Europe AB
@@ -53,23 +65,23 @@ sv:
       items:
         -
           date: 2016&ndash;2019
-          school: Systemvetenskap
-          description: Högskolan i Borås
+          program: <b class="dark">Systemvetenskap</b>; verksamhet och projektledning, samt utveckling och <abbr class="i" lang="en" title="Human-computer interaction">HCI</abbr>
+          school: Högskolan i Borås
         -
           date: 2011&ndash;2012
-          school: Innovativ Programmering
-          description: Linköpings Universitet; ofullständig utbildning
+          program: <b class="dark">Innovativ Programmering</b>; programmeringsorientad universitetslinje
+          school: Linköpings Universitet
         -
           date: 2008&ndash;2011
-          school: Teknik, teoretisk inriktning
-          description: Tingsholmsgymnasiet
+          program: <b class="dark">Teknikprogrammet</b>, teoretisk inriktning; matte, fysik, språk, <abbr class="i" lang="en" title="Computer aided design">CAD</abbr> och <abbr class="i" lang="en" title="Computer numerical control">CNC</abbr>, samt datorrelaterade ämnen
+          school: Tingsholmsgymnasiet
 
     languages:
       title: Språkkunskaper
       items:
         -
           title: Svenska
-          description: Flytande i både tal och skrift; modersmål
+          description: Flytande i både tal och skrift
         -
           title: Engelska
           description: Flytande i både tal och skrift
@@ -85,29 +97,31 @@ sv:
       items:
         -
           title: Adobe
-          example: InDesign, Photoshop, etc.
+          example: Photoshop, etc.
           description: Goda kunskaper
         -
           title: Microsoft Office
-          example: Excel, Word, etc.
+          example: Word, etc.
           description: Goda kunskaper
         -
           title: Operativsystem
           example: Windows &amp; Unix
           description: Mycket goda kunskaper
       description:
-        - Jag har även stor erfarenhet av utveckling i olika former, främst för webben, men även klassiska miljöer. Gällande webbutveckling är jag mycket van vid märk, stilmall- och skriptspråk <i>(front-end)</i>, samt olika språk och miljöer för bakgrundsutveckling <i>(back-end)</i>.
-        - Servermiljöer jag vanligtvis använder mig av är <a class="link" href="https://httpd.apache.org">Apache</a> och <a class="link" href="https://jamstack.org">JAMstack</a> <i>(<a class="link" href="https://www.netlify.com">Netlify</a>, <a class="link" href="https://zeit.co/now">Zeit</a>, etc.)</i>, men jag har även publicerat webbaserade projekt ovanpå <a class="link" href="https://nginx.org/en/">nginx</a>, samt utvecklat andra sådana med hjälp av <a class="link" href="https://www.iis.net">IIS</a>.
-        - Gällande utveckling för klassiska miljöer &ndash; ej webbaserat &ndash; har jag utvecklat applikationer för både Windows och iOS.
+        title: Programmering och utveckling
+        paragraphs:
+          - Jag har även stor erfarenhet av utveckling i olika former, främst för webben, men även i klassiska miljöer. Gällande webbutveckling är jag mycket van vid märk, stilmall-, och skriptspråk <i class="gray">(front-end)</i>, samt olika språk och miljöer för bakgrundsutveckling <i class="gray">(back-end)</i>.
+          - Servermiljöer jag vanligtvis använder mig av är <a class="link" href="https://httpd.apache.org">Apache</a> och <a class="link" href="https://jamstack.org">JAMstack</a> <i class="gray">(<a class="link" href="https://www.netlify.com">Netlify</a>, <a class="link" href="https://zeit.co/now">Zeit</a>, etc.)</i>, men jag har även publicerat webbaserade projekt ovanpå <a class="link" href="https://nginx.org/en/">nginx</a>, samt utvecklat andra sådana med hjälp av <a class="link" href="https://www.iis.net">IIS</a>.
+          - Gällande utveckling för klassiska miljöer &ndash; ej webbaserat &ndash; har jag utvecklat applikationer för både Windows och iOS.
       development:
         title: Programmeringsspråk och miljöer
         items:
           - Märkspråk
-          - Stilmallsspråk
-          - Skriptspråk
-          - Bakgrundsspråk
-          - Applikationsspråk
-          - Programmeringsmiljöer
+          - Stilmallar
+          - Skript
+          - Bakgrund
+          - Applikationer
+          - Miljöer
 
     miscellaneous:
       title: Övrig information
