@@ -90,5 +90,8 @@ items:
       title: Rails
       value: https://rubyonrails.org
     -
+      title: React
+      value: https://reactjs.org
+    -
       title: Vue
       value: https://vuejs.org
